@@ -1,0 +1,24 @@
+﻿@model Libros_Leidos.Models.Libros
+
+@{
+    ViewData["Title"] = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Registro de Libros Leídos</h1>
+
+        <!-- Botones con enlaces -->
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <a asp-controller="Libro" asp-action="Create" class="btn btn-primary">Crear un nuevo libro</a>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Volver al inicio</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+@section Scripts {
+    @await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
